@@ -1,5 +1,30 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="container">
+  <h1>Single value with simple center label function</h1>
+  {{radial-progress value=demo1 center=percentageLabel}}
+  {{input placeholder="demo1" value=demo1}}
+
+  <h1>Single value with custom color</h1>
+
+  {{radial-progress value=demo6 center=percentageLabel color=orangeTheme}}
+  {{input placeholder="demo6" value=demo6}}
+
+  <h1>Single value with multi line center label</h1>
+  {{radial-progress value=demo2 center=(array valueLabel "hours")}}
+  {{input placeholder="demo2" value=demo2}}
+
+  <h1>Single value with custom range</h1>
+  {{radial-progress value=demo3 center=(array valueLabel "hours") min=0 max=270}}
+  {{input placeholder="demo3" value=demo3}}
+
+  <h1>Series of values with multi line center label</h1>
+  {{radial-progress series=(array demo4.a demo4.b demo4.c) }}
+  {{input placeholder="demo4" value=demo4.a}}{{input placeholder="demo4" value=demo4.b}}{{input placeholder="demo4" value=demo4.c}}
+
+  {{!-- <h1>Series of values with multi line center label</h1> --}}
+  {{!-- {{radial-progress series=(array (hash value=demo5.a) (hash value=demo5.b) (hash value=demo5.c))}} --}}
+  {{!-- {{input placeholder="demo5" value=demo5.a}}{{input placeholder="demo5" value=demo5.b}}{{input placeholder="demo5" value=demo5.c}} --}}
+
+
+</div>
 
 {{outlet}}

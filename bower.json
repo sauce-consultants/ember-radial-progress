@@ -1,4 +1,6 @@
 {
   "name": "ember-radial-progress",
-  "dependencies": {}
+  "dependencies": {
+    "d3": "^3.5.0"
+  }
 }

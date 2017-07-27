@@ -1,0 +1,50 @@
+body {
+   background: black;
+   margin: 20px auto;
+   font-family: 'Roboto', 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial;
+ }
+
+ .container {
+   text-align: center;
+ }
+
+ .container div {
+   display: inline-block;
+   width: 250px;
+ }
+
+  h1 {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    margin:20px 0 10px;
+  }
+
+  input {
+    background: white;
+    border:none;
+    color:black;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    margin:10px auto;
+    text-align: center;
+    width:200px;
+  }
+ .rbc-label-start {
+   font-family: fontawesome;
+   font-weight: bold;
+   font-size: 30px;
+ }
+
+ .rbc-center-text {
+   fill: white;
+   font-size: 45px;
+ }
+ .rbc-center-text-line0 {
+   font-size: 45px;
+ }
+
+ .rbc-center-text-line1 {
+   font-size: 20px;
+ }
