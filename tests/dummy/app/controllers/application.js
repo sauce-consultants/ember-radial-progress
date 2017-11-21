@@ -35,11 +35,11 @@ export default Controller.extend({
     },
     stops: [{
       offset: '0%',
-      'stop-color': '#fe08b5',
+      'stop-color': '#d5299f',
       'stop-opacity': 1
     }, {
       offset: '100%',
-      'stop-color': '#ff1410',
+      'stop-color': '#E887C9',
       'stop-opacity': 1
     }]
   },
@@ -53,13 +53,13 @@ export default Controller.extend({
     },
     stops: [{
       offset: '0%',
-      'stop-color': '#2D7676',
+      'stop-color': '#41AAAA',
       'stop-opacity': 1
     }, {
       offset: '100%',
-      'stop-color': '#89D2D2',
+      'stop-color': '#2D7676',
       'stop-opacity': 1
-    }]
+    }],
   },
   orangeTheme: {
     linearGradient: {
@@ -97,4 +97,16 @@ export default Controller.extend({
       'stop-opacity': 1
     }]
   },
+  multiSeries: computed('demo5.a', 'demo5.b', 'demo5.c', function() {
+    return [{
+      color: '#D5299F',
+      value: this.get('demo5.a'),
+    }, {
+      color: '#41AAAA',
+      value: this.get('demo5.b'),
+    }, {
+      color: '#FF6D00',
+      value: this.get('demo5.c'),
+    }];
+  }),
 });

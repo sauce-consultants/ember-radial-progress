@@ -72,6 +72,8 @@ export default Ember.Component.extend({
 
     series = this.parseSeries(series, value);
 
+    Ember.Logger.log(series);
+
     Ember.Logger.log(`init chart #${elementId}`);
 
     var progress = new RadialProgressChart(`#${elementId}`, {
@@ -99,19 +101,7 @@ export default Ember.Component.extend({
         color,
         labelStart,
       }];
-
-      Ember.Logger.log(series);
-    } else if (Ember.typeOf(series[0]) === 'object') {
-      // the hash helper returns js EmptyObject instances
-      // so we have to map to proper objects for the Chart
-      // plugin to use
-      series = series.map((obj) => {
-        Ember.Logger.log(obj);
-        return {
-          value: obj.value
-        };
-      });
-    } else {
+    } else if (Ember.typeOf(series[0]) !== 'object') {
       // Same here for flat arrays
       series = series.map((obj) => {
         return parseFloat(obj);
