@@ -48,7 +48,6 @@ export default Component.extend({
     let series = this.parseSeries(this.get('series')),
       progress = this.get('_progress');
 
-    window.console.log(series);
     progress.update(series);
   },
   initChart() {
@@ -73,10 +72,6 @@ export default Component.extend({
       elementId = this.elementId;
 
     series = this.parseSeries(series, value);
-
-    window.console.log(series);
-
-    window.console.log(`init chart #${elementId}`);
 
     var progress = new RadialProgressChart(`#${elementId}`, {
       diameter,
