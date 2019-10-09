@@ -13,8 +13,17 @@ module.exports = function(defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
-  app.import('bower_components/d3/d3.js');
-  app.import('bower_components/radial-progress-chart/dist/radial-progress-chart.js');
+  // app.import('bower_components/d3/d3.js');
+  // app.import('bower_components/radial-progress-chart/dist/radial-progress-chart.js');
+  /*
+   * Moved bower dependencies to vendor
+   * "dependencies": {
+   *   "d3": "^3.5.0",
+   *   "radial-progress-chart": "^0.0.4"
+   * }
+   */
+  app.import('vendor/d3/d3.js');
+  app.import('vendor/radial-progress-chart.js');
 
   return app.toTree();
 };

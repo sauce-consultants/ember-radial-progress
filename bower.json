@@ -1,7 +1,0 @@
-{
-  "name": "ember-radial-progress",
-  "dependencies": {
-    "d3": "^3.5.0",
-    "radial-progress-chart": "^0.0.4"
-  }
-}

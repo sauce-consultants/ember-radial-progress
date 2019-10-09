@@ -1,3 +1,5 @@
+/* global RadialProgressChart*/
+
 import Ember from 'ember';
 import layout from '../templates/components/radial-progress';
 
@@ -46,7 +48,7 @@ export default Component.extend({
     let series = this.parseSeries(this.get('series')),
       progress = this.get('_progress');
 
-    Ember.Logger.log(series);
+    window.console.log(series);
     progress.update(series);
   },
   initChart() {
@@ -58,7 +60,7 @@ export default Component.extend({
         gap: this.get('strokeGap'),
       },
       shadow = {
-        width: this.get('shadowWidth'),
+        width: parseInt(this.get('shadowWidth')),
       },
       animation = {
         duration: this.get('animationDuration'),
@@ -72,9 +74,9 @@ export default Component.extend({
 
     series = this.parseSeries(series, value);
 
-    Ember.Logger.log(series);
+    window.console.log(series);
 
-    Ember.Logger.log(`init chart #${elementId}`);
+    window.console.log(`init chart #${elementId}`);
 
     var progress = new RadialProgressChart(`#${elementId}`, {
       diameter,
