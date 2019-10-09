@@ -6,7 +6,7 @@ const {
   observer
 } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
   classNames: ['radial-progress'],
   value: 0,

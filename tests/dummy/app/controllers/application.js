@@ -5,10 +5,10 @@ const {
 } = Ember;
 
 export default Controller.extend({
-  percentageLabel: function(value, index, item) {
+  percentageLabel: function(value /*, index, item*/ ) {
     return `${value}%`;
   },
-  valueLabel: function(value, index, item) {
+  valueLabel: function(value /*, index, item*/ ) {
     return value;
   },
   demo1: 25,
